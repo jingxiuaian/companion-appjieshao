@@ -1,0 +1,725 @@
+{
+  "generatedAt": "2026-10-28T01:09:27.705Z",
+  "mode": "static/logic（无浏览器）",
+  "summary": {
+    "total": 49,
+    "passed": 49,
+    "failed": 0,
+    "blocking": 0,
+    "suggestion": 0
+  },
+  "failed": [],
+  "checks": [
+    {
+      "name": "所有本地资源 HTTP 200 且非空（13 图 + favicon + css/js + demo 7 文件）",
+      "pass": true,
+      "detail": "24 个 URL 全部 200",
+      "severity": "严重"
+    },
+    {
+      "name": "13 张应用截图都是 780×1688（390×844 @2x）真实渲染尺寸",
+      "pass": true,
+      "detail": "13 张全部 780x1688",
+      "severity": "建议"
+    },
+    {
+      "name": "assets/ 恰好 13 张截图（无多余/缺失）",
+      "pass": true,
+      "detail": "13 张：backlog.png, hero-today.png, notes.png, schedule.png, settings.png, sprint-exam.png, sprint.png, suggest.png, theme-amber.png, theme-ink.png, theme-teal.png, today-tasks.png, week.png",
+      "severity": "建议"
+    },
+    {
+      "name": "demo/ 与应用本体逐字节一致（截图与文案对得上真实应用）",
+      "pass": true,
+      "detail": "7 个文件 SHA256 全一致",
+      "severity": "严重"
+    },
+    {
+      "name": "<img> 全部有非空 alt",
+      "pass": true,
+      "detail": "14 张都有 alt",
+      "severity": "建议"
+    },
+    {
+      "name": "<img> 都带 width/height（减少 CLS 抖动）",
+      "pass": true,
+      "detail": "全部带宽高",
+      "severity": "建议"
+    },
+    {
+      "name": "页内锚点 href 都有对应 id（#turn/#loop/#features/#gallery/#privacy/#main/#top/#start）",
+      "pass": true,
+      "detail": "检查了 10 个锚点",
+      "severity": "严重"
+    },
+    {
+      "name": "导航 5 个锚点齐全（拐点/怎么陪/功能/界面/隐私）",
+      "pass": true,
+      "detail": "#turn,#loop,#features,#gallery,#privacy,#gallery,#turn",
+      "severity": "建议"
+    },
+    {
+      "name": "界面巡览 5 组 tab/panel ARIA 关系正确（aria-controls / aria-labelledby / hidden）",
+      "pass": true,
+      "detail": "tabs=5 panels=5",
+      "severity": "建议"
+    },
+    {
+      "name": "标题层级合理（h1 开头、不跳级）",
+      "pass": true,
+      "detail": "h1 → h2 → h3 → h3 → h2 → h3 → h3 → h3 → h2 → h3 → h3 → h3 → h3 → h3 → h3 → h3 → h2 → h3 → h2 → h3 → h3 → h2 → h2",
+      "severity": "建议"
+    },
+    {
+      "name": "介绍页零外部资源（无 http(s) 引用，断网可看）",
+      "pass": true,
+      "detail": "无外链",
+      "severity": "严重"
+    },
+    {
+      "name": "script 只有本地 script.js + 一个内联主题预防脚本（无第三方脚本）",
+      "pass": true,
+      "detail": "(inline),script.js",
+      "severity": "建议"
+    },
+    {
+      "name": "head 内联脚本在 CSS 前恢复主题（防闪白）",
+      "pass": true,
+      "detail": "",
+      "severity": "建议"
+    },
+    {
+      "name": "script.js 引用的 getElementById 都存在",
+      "pass": true,
+      "detail": "5 个 id 全部命中",
+      "severity": "严重"
+    },
+    {
+      "name": "script.js 引用的 class 在 HTML 里存在",
+      "pass": true,
+      "detail": "3 个 class 命中",
+      "severity": "建议"
+    },
+    {
+      "name": "初始段控 aria-pressed 完整（未选中的也应有 aria-pressed=false）",
+      "pass": true,
+      "detail": "缺 aria-pressed 的：",
+      "severity": "建议"
+    },
+    {
+      "name": "装饰性 svg 有 aria-hidden，信息图 svg 有 role=img + aria-label",
+      "pass": true,
+      "detail": "",
+      "severity": "建议"
+    },
+    {
+      "name": "页面 lang=zh-CN、viewport、description、theme-color 齐全",
+      "pass": true,
+      "detail": "",
+      "severity": "建议"
+    },
+    {
+      "name": "HTML 没有重复 id（getElementById / aria 关系不会错乱）",
+      "pass": true,
+      "detail": "25 个 id 全部唯一",
+      "severity": "严重"
+    },
+    {
+      "name": "aria-controls / aria-labelledby 指向的 id 都存在",
+      "pass": true,
+      "detail": "10 个引用全部命中",
+      "severity": "建议"
+    },
+    {
+      "name": "HTML 引用的图片文件都存在",
+      "pass": true,
+      "detail": "14 个引用全部命中",
+      "severity": "严重"
+    },
+    {
+      "name": "og:image 指向存在的截图（本地站点用相对路径可接受）",
+      "pass": true,
+      "detail": "assets/hero-today.png",
+      "severity": "可选"
+    },
+    {
+      "name": "script.js 没有遗留 console.log（控制台干净）",
+      "pass": true,
+      "detail": "",
+      "severity": "可选"
+    },
+    {
+      "name": "demo/index.html 引用的本地 js/css/图标都存在",
+      "pass": true,
+      "detail": "4 个引用全部命中",
+      "severity": "严重"
+    },
+    {
+      "name": "双主题变量块齐全（dark=夜读灯 / light=纸感）",
+      "pass": true,
+      "detail": "dark 33 项 / light 24 项",
+      "severity": "严重"
+    },
+    {
+      "name": "两套主题都定义了正文/次要/弱化/品牌/按钮前景等关键色",
+      "pass": true,
+      "detail": "dark 缺:无 light 缺:无",
+      "severity": "建议"
+    },
+    {
+      "name": "深色主题文字/背景对比度 ≥ 4.5:1（含弱化文字）",
+      "pass": true,
+      "detail": "最低 4.51:1（弱化 muted/surface-2）",
+      "severity": "建议"
+    },
+    {
+      "name": "浅色主题文字/背景对比度 ≥ 4.5:1（含弱化文字）",
+      "pass": true,
+      "detail": "最低 4.72:1（弱化 muted/bg）",
+      "severity": "建议"
+    },
+    {
+      "name": "半透明 sticky 导航上的链接文字对比度 ≥ 4.5:1（两套主题）",
+      "pass": true,
+      "detail": "dark=7.2 light=5.39",
+      "severity": "建议"
+    },
+    {
+      "name": "粘性导航 + 锚点留白：.nav position:sticky 且 section[id] 有 scroll-margin-top ≥ 导航高度",
+      "pass": true,
+      "detail": "scroll-margin-top=84px，导航 74/64px",
+      "severity": "严重"
+    },
+    {
+      "name": "reduced-motion 下拐点曲线不依赖动画（dashoffset:0 + opacity:1）",
+      "pass": true,
+      "detail": "",
+      "severity": "严重"
+    },
+    {
+      "name": "页面含 .panel[hidden]{display:none}（页签切换不会叠图）",
+      "pass": true,
+      "detail": "",
+      "severity": "建议"
+    },
+    {
+      "name": "响应式断点覆盖 1060/980/860/640/420",
+      "pass": true,
+      "detail": "1060, 980, 860, 640, 420",
+      "severity": "建议"
+    },
+    {
+      "name": "没有用 body/html overflow-x:hidden 掩盖横向溢出（真检查才有意义）",
+      "pass": true,
+      "detail": "未发现掩盖写法",
+      "severity": "建议"
+    },
+    {
+      "name": "拐点标注在 ≤640px 有避让规则（当前 .anno-turn 绝对定位在图例行上方，窄屏易压字）",
+      "pass": true,
+      "detail": "anno-turn top 负值=true, 图例可换行=true, 640 断点未隐藏 anno-turn=false",
+      "severity": "严重"
+    },
+    {
+      "name": "主题：点 #themeBtn 在 dark↔light 间切换，aria-label/meta theme-color 同步，并写入 localStorage",
+      "pass": true,
+      "detail": "->light->dark label=\"切换界面风格：纸感 → 夜读灯\" meta=#F3EDE3",
+      "severity": "严重"
+    },
+    {
+      "name": "页签：5 个都点得通，同一时刻 1 个 selected / 1 个 panel 可见 / 唯一 tabindex=0",
+      "pass": true,
+      "detail": "#0:true #1:true #2:true #3:true #4:true",
+      "severity": "严重"
+    },
+    {
+      "name": "页签键盘：← → Home End 可切且首尾环绕，焦点跟随",
+      "pass": true,
+      "detail": "[1,2,4,0,4,4]",
+      "severity": "建议"
+    },
+    {
+      "name": "建议工具：低精力+20 分钟出空态，且说明「没有合适的」",
+      "pass": true,
+      "detail": "空态出现，文案：没有合适的。",
+      "severity": "严重"
+    },
+    {
+      "name": "建议工具：6 组组合结果正确且随组合变化",
+      "pass": true,
+      "detail": "低/20:0 低/45:1(读《被讨厌的勇气》) 中/45:3(法学网课,读《被讨厌的勇气》,低冲击健身) 高/20:1 高/90:3(剪参赛视频,英语单词,法学网课) 中/可外出/90:3(楼下散步,法学网课,读《被讨厌的勇气》)",
+      "severity": "严重"
+    },
+    {
+      "name": "建议工具：每条建议都带理由，且能量/场景过滤生效（中精力不推高精力事项、室内不推室外事项）",
+      "pass": true,
+      "detail": "中/45 names=法学网课,读《被讨厌的勇气》,低冲击健身 高/90 names=剪参赛视频,英语单词,法学网课",
+      "severity": "建议"
+    },
+    {
+      "name": "建议工具：点击后按钮 aria-pressed 全部同步（每组恰好 1 个 on）",
+      "pass": true,
+      "detail": "pressedAll=true on=3",
+      "severity": "建议"
+    },
+    {
+      "name": "建议工具：「现在有 N 分钟」随可支配变化",
+      "pass": true,
+      "detail": "90→90m, 20→20m",
+      "severity": "建议"
+    },
+    {
+      "name": "建议工具：无建议时的空态文案与真实应用的「说清为什么没有」口径一致",
+      "pass": true,
+      "detail": "脚本内含该说明（静态核对）",
+      "severity": "可选"
+    },
+    {
+      "name": "导航：滚动位置对应区块高亮正确（含顶部不高亮）",
+      "pass": true,
+      "detail": "top:[] turn:[\"#turn\"] features:[\"#features\"]",
+      "severity": "建议"
+    },
+    {
+      "name": "导航：滚到底（CTA/页脚）不会把「隐私」错误高亮",
+      "pass": true,
+      "detail": "底部高亮=[]",
+      "severity": "建议"
+    },
+    {
+      "name": "导航：滚动后加 .scrolled（半透明底+描边）",
+      "pass": true,
+      "detail": "top=false scrolled=true",
+      "severity": "建议"
+    },
+    {
+      "name": "拐点图：进入视口后加 .is-in 触发接上动画（IntersectionObserver 接线正确）",
+      "pass": true,
+      "detail": "before=false observed=true after=true",
+      "severity": "建议"
+    },
+    {
+      "name": "拐点图：浏览器不支持 IntersectionObserver 时直接显示（降级路径）",
+      "pass": true,
+      "detail": "",
+      "severity": "建议"
+    }
+  ],
+  "facts": [
+    {
+      "claim": "介绍站自称「真实截图、不是设计稿」",
+      "status": "OK",
+      "note": "13 张 PNG 为 780×1688（390×844@2x）；tools/SHOOTING.md 记录了 headless Chrome + 演示数据的拍摄流程；demo 与应用本体字节一致"
+    },
+    {
+      "claim": "「冲刺计划：考前 11 天，每天一份考点配额；高频、星级、一句话要点都在」",
+      "status": "OK",
+      "note": "plan-data days=11 起 2026-10-13，首场考试 2026-10-24，考期名「2026年10月考期 · 冲刺11天」，共 424 个条目（考点 369 / 单词组 9 / 成套任务 46）；stars=true freq=true 考点要点齐全=true"
+    },
+    {
+      "claim": "「冲刺：没勾完的自动顺延、低星考点可以一键让位、考试当天切到扫读视图」",
+      "status": "OK",
+      "note": "app.js 注释与逻辑：carry 顺延 / sp-yielded 让位 / 考试日 spExamCard 高频清单"
+    },
+    {
+      "claim": "「四套暗色皮肤：紫藤/青竹/暖阳/墨蓝，设置里一点就换」",
+      "status": "OK",
+      "note": "THEME_NAMES = violet/teal/amber/ink；设置弹窗有 data-set-theme 色板"
+    },
+    {
+      "claim": "「一键导入今天该做的」",
+      "status": "OK",
+      "note": "应用今日页按钮文案即「一键导入」"
+    },
+    {
+      "claim": "「从作息反推出空闲碎片」",
+      "status": "OK",
+      "note": "作息页「从作息生成」生成空闲时间段"
+    },
+    {
+      "claim": "「勾掉时记下实际花了多久，提前做完省下的时间会回到可支配」",
+      "status": "OK",
+      "note": "commitActual 记录 actual；freeMinOf 已完成按实际耗时算"
+    },
+    {
+      "claim": "「周视图：连续打卡几天、这周完成了多少、未来 7 天该做的事和截止日」",
+      "status": "OK",
+      "note": "renderWeek：streak/本周完成/未来 7 天（含截止日与习惯到期）"
+    },
+    {
+      "claim": "「记事本：清单能打勾划掉」",
+      "status": "OK",
+      "note": "notes 有 todo/note 两种；done 清单加 .done（styles.css 划线）"
+    },
+    {
+      "claim": "「本地反馈：报告在本机拼好，版本/环境/各模块数量；事项名、笔记、勾了哪些考点都不会被带上」",
+      "status": "OK",
+      "note": "buildReport = 版本 + envSummary + countSummary（纯数量）+ settings + 最近报错；README 明确不带文字内容"
+    },
+    {
+      "claim": "「数据只存 localStorage / 没有服务器」",
+      "status": "OK",
+      "note": "app.js 无 fetch/XHR/WebSocket/beacon；数据在 localStorage"
+    },
+    {
+      "claim": "「应用本身没接统计脚本，这个介绍页也没有」",
+      "status": "OK",
+      "note": "两边都没有统计/埋点代码，介绍页无外链"
+    },
+    {
+      "claim": "「没有云同步和账号体系，换设备要重新填」",
+      "status": "OK",
+      "note": "README：多用户/云同步列为未来方向；无登录代码"
+    },
+    {
+      "claim": "「13 张真实截图，不是设计稿」",
+      "status": "OK",
+      "note": "PNG 780×1688；tools/SHOOTING.md 记录了 headless Chrome 拍摄流程"
+    },
+    {
+      "claim": "页脚版本 v5",
+      "status": "OK",
+      "note": "APP_VERSION = v5，介绍页页脚 v5"
+    },
+    {
+      "claim": "「四套皮肤」截图真实存在（hero 紫藤 + theme-teal/amber/ink 三张）",
+      "status": "OK",
+      "note": "4 张皮肤截图齐全"
+    },
+    {
+      "claim": "介绍页「数据只在这台设备上」键名卡与实际 localStorage 键一致",
+      "status": "OK",
+      "note": "companion-plan-v2 / companion-sprint-v1 / companion-settings（鼓励·休息日·导入方式）/ companion-theme（界面颜色），与 app.js 的 STORE_KEY / SPRINT_KEY / SETTINGS_KEY / companion-theme 一致；未列 companion-plan-errors（只列主要数据，不影响真实性）"
+    },
+    {
+      "claim": "介绍页「设置里只有几项：导入方式、鼓励频率、界面颜色」",
+      "status": "OK",
+      "note": "实际设置弹窗还有「反馈问题/提建议」入口（介绍页别处也描述了反馈，属列举不完整，不算假）"
+    },
+    {
+      "claim": "介绍页「它不会把今天已经排过、或者已经做完的事再推一遍」",
+      "status": "OK",
+      "note": "suggest() 候选过滤 inPlan + lastDone===today"
+    },
+    {
+      "claim": "介绍页「冲刺截图对应 2026 年 10 月考期、计划期 2026-10-13 起 11 天（README 口径）」",
+      "status": "OK",
+      "note": "start=2026-10-13 days=11 exam=2026-10-24/2026-10-25"
+    },
+    {
+      "claim": "介绍页图注「事项池：每个事项标好最短时长、精力、场景和优先级」",
+      "status": "OK",
+      "note": "应用事项池有 最短时长/精力/场景/优先级/截止或习惯 标签"
+    },
+    {
+      "claim": "介绍页「精力有数：开建议之前先问你现在的精力和环境」",
+      "status": "OK",
+      "note": "应用与介绍页小工具都有 精力/场景 段控"
+    },
+    {
+      "claim": "介绍页「建议按『时长够不够 → 精力场景合不合适 → 哪件事更急』排序，给前几条」",
+      "status": "OK",
+      "note": "suggest()：min 过滤 → sceneAllow → energyAllow → score(截止/断档/优先级) → slice(0,3)"
+    },
+    {
+      "claim": "介绍页是否宣称 PWA / 添加到主屏幕",
+      "status": "OK（未宣称）",
+      "note": "当前 HTML 无 PWA/主屏说法（.tmp/shots 旧预览里有，属旧版，已改）"
+    },
+    {
+      "claim": "介绍页自称「双击 index.html 就能用」",
+      "status": "OK",
+      "note": "应用 README：纯前端零依赖，双击 index.html 可开"
+    }
+  ],
+  "contrast": {
+    "dark": [
+      {
+        "name": "正文 text/bg",
+        "ratio": 15.62
+      },
+      {
+        "name": "次要 sub/bg",
+        "ratio": 7.2
+      },
+      {
+        "name": "弱化 muted/bg",
+        "ratio": 5.15
+      },
+      {
+        "name": "品牌 brand/bg",
+        "ratio": 6.22
+      },
+      {
+        "name": "按钮 on-brand/brand",
+        "ratio": 6.22
+      },
+      {
+        "name": "正文 text/surface",
+        "ratio": 14.55
+      },
+      {
+        "name": "次要 sub/surface",
+        "ratio": 6.71
+      },
+      {
+        "name": "弱化 muted/surface",
+        "ratio": 4.8
+      },
+      {
+        "name": "正文 text/surface-2",
+        "ratio": 13.69
+      },
+      {
+        "name": "次要 sub/surface-2",
+        "ratio": 6.31
+      },
+      {
+        "name": "弱化 muted/surface-2",
+        "ratio": 4.51
+      },
+      {
+        "name": "次要 sub/seg",
+        "ratio": 6.05
+      },
+      {
+        "name": "品牌 brand/surface",
+        "ratio": 5.79
+      },
+      {
+        "name": "卡片样张 mini-text/mini",
+        "ratio": 13.64
+      },
+      {
+        "name": "卡片样张 mini-sub/mini",
+        "ratio": 6.22
+      }
+    ],
+    "light": [
+      {
+        "name": "正文 text/bg",
+        "ratio": 12.78
+      },
+      {
+        "name": "次要 sub/bg",
+        "ratio": 5.39
+      },
+      {
+        "name": "弱化 muted/bg",
+        "ratio": 4.72
+      },
+      {
+        "name": "品牌 brand/bg",
+        "ratio": 5.28
+      },
+      {
+        "name": "按钮 on-brand/brand",
+        "ratio": 6.15
+      },
+      {
+        "name": "正文 text/surface",
+        "ratio": 13.93
+      },
+      {
+        "name": "次要 sub/surface",
+        "ratio": 5.88
+      },
+      {
+        "name": "弱化 muted/surface",
+        "ratio": 5.14
+      },
+      {
+        "name": "正文 text/surface-2",
+        "ratio": 13.02
+      },
+      {
+        "name": "次要 sub/surface-2",
+        "ratio": 5.49
+      },
+      {
+        "name": "弱化 muted/surface-2",
+        "ratio": 4.81
+      },
+      {
+        "name": "次要 sub/seg",
+        "ratio": 4.8
+      },
+      {
+        "name": "品牌 brand/surface",
+        "ratio": 5.75
+      }
+    ]
+  },
+  "resources": [
+    {
+      "u": "index.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 29443
+    },
+    {
+      "u": "styles.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8",
+      "bytes": 35188
+    },
+    {
+      "u": "script.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8",
+      "bytes": 8737
+    },
+    {
+      "u": "favicon.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 247
+    },
+    {
+      "u": "assets/hero-today.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 145192,
+      "w": 780,
+      "h": 1688
+    },
+    {
+      "u": "assets/today-tasks.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 147061,
+      "w": 780,
+      "h": 1688
+    },
+    {
+      "u": "assets/suggest.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 195946,
+      "w": 780,
+      "h": 1688
+    },
+    {
+      "u": "assets/backlog.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 162137,
+      "w": 780,
+      "h": 1688
+    },
+    {
+      "u": "assets/week.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 143308,
+      "w": 780,
+      "h": 1688
+    },
+    {
+      "u": "assets/schedule.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 137262,
+      "w": 780,
+      "h": 1688
+    },
+    {
+      "u": "assets/notes.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 105438,
+      "w": 780,
+      "h": 1688
+    },
+    {
+      "u": "assets/sprint.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 276031,
+      "w": 780,
+      "h": 1688
+    },
+    {
+      "u": "assets/sprint-exam.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 225673,
+      "w": 780,
+      "h": 1688
+    },
+    {
+      "u": "assets/settings.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 151832,
+      "w": 780,
+      "h": 1688
+    },
+    {
+      "u": "assets/theme-teal.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 149749,
+      "w": 780,
+      "h": 1688
+    },
+    {
+      "u": "assets/theme-amber.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 150020,
+      "w": 780,
+      "h": 1688
+    },
+    {
+      "u": "assets/theme-ink.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 151662,
+      "w": 780,
+      "h": 1688
+    },
+    {
+      "u": "demo/index.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 18119
+    },
+    {
+      "u": "demo/app.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8",
+      "bytes": 77717
+    },
+    {
+      "u": "demo/styles.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8",
+      "bytes": 27957
+    },
+    {
+      "u": "demo/plan-data.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8",
+      "bytes": 430287
+    },
+    {
+      "u": "demo/manifest.webmanifest",
+      "status": 200,
+      "type": "application/manifest+json",
+      "bytes": 420
+    },
+    {
+      "u": "demo/sw.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8",
+      "bytes": 1030
+    },
+    {
+      "u": "demo/icon.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 247
+    }
+  ]
+}

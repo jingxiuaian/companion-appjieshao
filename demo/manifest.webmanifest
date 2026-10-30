@@ -1,0 +1,13 @@
+{
+  "name": "陪伴·计划",
+  "short_name": "陪伴·计划",
+  "description": "在碎片时间里推进多目标，并在提前完成后告诉你多出的时间该干嘛。",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F5F6FB",
+  "theme_color": "#5B5BD6",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

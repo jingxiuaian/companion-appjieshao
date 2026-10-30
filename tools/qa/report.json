@@ -1,0 +1,1741 @@
+{
+  "generatedAt": "2026-10-28T01:09:03.225Z",
+  "url": "http://127.0.0.1:8921/index.html",
+  "viewport": "375 / 768 / 1440，dark + light",
+  "summary": {
+    "total": 76,
+    "passed": 76,
+    "failed": 0,
+    "blocking": 0,
+    "suggestion": 0
+  },
+  "failed": [],
+  "checks": [
+    {
+      "name": "所有资源可达（13 图 + favicon + css/js + demo 全文件）",
+      "pass": true,
+      "detail": "共 24 个 URL 全部 200",
+      "severity": "严重",
+      "phase": "资源"
+    },
+    {
+      "name": "网络请求无 4xx/5xx",
+      "pass": true,
+      "detail": "已观察 41 个响应",
+      "severity": "严重",
+      "phase": "资源"
+    },
+    {
+      "name": "标题/语言/meta viewport",
+      "pass": true,
+      "detail": "title=陪伴 · 计划 —— 计划不是死在开头，是死在中间 lang=zh-CN",
+      "severity": "建议",
+      "phase": "结构"
+    },
+    {
+      "name": "只有一个 h1 且标题层级不跳级",
+      "pass": true,
+      "detail": "首个 h1，共 23 个标题",
+      "severity": "建议",
+      "phase": "结构"
+    },
+    {
+      "name": "所有图片都有非空 alt",
+      "pass": true,
+      "detail": "14 张图",
+      "severity": "建议",
+      "phase": "可访问性"
+    },
+    {
+      "name": "所有图片加载成功（naturalWidth>0）",
+      "pass": true,
+      "detail": "14 张",
+      "severity": "严重",
+      "phase": "资源"
+    },
+    {
+      "name": "tab/panel ARIA 关系正确（5 个页签、1 个 selected、1 个可见 panel）",
+      "pass": true,
+      "detail": "tabOk=true selected=1 visiblePanels=1",
+      "severity": "建议",
+      "phase": "可访问性"
+    },
+    {
+      "name": "锚点 href 都有对应目标",
+      "pass": true,
+      "detail": "全部命中",
+      "severity": "严重",
+      "phase": "交互"
+    },
+    {
+      "name": "建议工具输出区有 aria-live",
+      "pass": true,
+      "detail": "aria-live=polite",
+      "severity": "建议",
+      "phase": "可访问性"
+    },
+    {
+      "name": "没有外部资源引用（零依赖/断网可用）",
+      "pass": true,
+      "detail": "无 http(s) 引用",
+      "severity": "严重",
+      "phase": "结构"
+    },
+    {
+      "name": "demo 链接 target=_blank + rel=noopener",
+      "pass": true,
+      "detail": "[{\"href\":\"demo/index.html\",\"target\":\"_blank\",\"rel\":\"noopener\"},{\"href\":\"demo/index.html\",\"target\":\"_blank\",\"rel\":\"noopener\"},{\"href\":\"demo/index.html\",\"target\":\"_blank\",\"rel\":\"noopener\"},{\"href\":\"demo/index.html\",\"target\":\"_blank\",\"rel\":\"noopener\"}]",
+      "severity": "建议",
+      "phase": "结构"
+    },
+    {
+      "name": "初始段控 aria-pressed 完整（未选中的也应有 false）",
+      "pass": true,
+      "detail": "缺 aria-pressed 的按钮：无",
+      "severity": "建议",
+      "phase": "可访问性"
+    },
+    {
+      "name": "1440 宽无横向滚动",
+      "pass": true,
+      "detail": "scrollWidth=1425 innerWidth=1440",
+      "severity": "严重",
+      "phase": "响应式 1440"
+    },
+    {
+      "name": "1440 宽无元素溢出视口",
+      "pass": true,
+      "detail": "[]",
+      "severity": "严重",
+      "phase": "响应式 1440"
+    },
+    {
+      "name": "1440 宽无文字被容器截断",
+      "pass": true,
+      "detail": "[]",
+      "severity": "建议",
+      "phase": "响应式 1440"
+    },
+    {
+      "name": "1440 宽 CTA 按钮 / 手机截图 / 卡片 / 浮卡不破版（都在视口内）",
+      "pass": true,
+      "detail": "[]",
+      "severity": "严重",
+      "phase": "响应式 1440"
+    },
+    {
+      "name": "拐点图滚动进入视口后接上（is-in + 曲线可见）",
+      "pass": true,
+      "detail": "isIn=true muted=0.9 area=1 dot=1",
+      "severity": "严重",
+      "phase": "拐点图"
+    },
+    {
+      "name": "拐点标注与图例不重叠（y 轴区间不相交）",
+      "pass": true,
+      "detail": "legend={\"t\":1232,\"b\":1253,\"l\":214,\"r\":397} anno={\"t\":1248,\"b\":1276,\"l\":632,\"r\":684,\"display\":\"block\"}",
+      "severity": "严重",
+      "phase": "拐点图"
+    },
+    {
+      "name": "加载/滚动全程无 JS 报错",
+      "pass": true,
+      "detail": "无",
+      "severity": "严重",
+      "phase": "控制台"
+    },
+    {
+      "name": "全页截图（1440-dark）",
+      "pass": true,
+      "detail": "1425x8819",
+      "severity": "可选",
+      "phase": "截图"
+    },
+    {
+      "name": "深色主题关键文本对比度 ≥ 4.5:1（大字 ≥3:1）",
+      "pass": true,
+      "detail": "60 处文本全部达标，最低 4.51:1",
+      "severity": "建议",
+      "phase": "主题 dark"
+    },
+    {
+      "name": "reduced-motion：拐点曲线直接是最终形态（dashoffset≈0、各层 opacity=1，无需滚动触发）",
+      "pass": true,
+      "detail": "isIn=false dashoffset=0px muted=1 area=1 dot=1 anno=1",
+      "severity": "严重",
+      "phase": "reduced-motion"
+    },
+    {
+      "name": "点击 #themeBtn 切换 html[data-theme]（dark→light）",
+      "pass": true,
+      "detail": "dark → light",
+      "severity": "严重",
+      "phase": "主题"
+    },
+    {
+      "name": "切换时 meta theme-color 与按钮 aria-label 同步",
+      "pass": true,
+      "detail": "meta=#F3EDE3 label=切换界面风格：纸感 → 夜读灯",
+      "severity": "建议",
+      "phase": "主题"
+    },
+    {
+      "name": "刷新后 localStorage 主题记忆生效",
+      "pass": true,
+      "detail": "{\"theme\":\"light\",\"saved\":\"light\"}",
+      "severity": "严重",
+      "phase": "主题"
+    },
+    {
+      "name": "再切回深色并刷新仍记忆正确",
+      "pass": true,
+      "detail": "",
+      "severity": "严重",
+      "phase": "主题"
+    },
+    {
+      "name": "全页截图（1440-light）",
+      "pass": true,
+      "detail": "1425x8819",
+      "severity": "可选",
+      "phase": "截图"
+    },
+    {
+      "name": "浅色主题关键文本对比度 ≥ 4.5:1（大字 ≥3:1）",
+      "pass": true,
+      "detail": "60 处文本全部达标，最低 4.72:1",
+      "severity": "建议",
+      "phase": "主题 light"
+    },
+    {
+      "name": "界面巡览 5 个页签：点击后 aria-selected/hidden/图片显示都正确",
+      "pass": true,
+      "detail": "tab0:true/false/false/false/false|hidden=01111|imgs=2 ; tab1:false/true/false/false/false|hidden=10111|imgs=2 ; tab2:false/false/true/false/false|hidden=11011|imgs=2 ; tab3:false/false/false/true/false|hidden=11101|imgs=2 ; tab4:false/false/false/false/true|hidden=11110|imgs=1",
+      "severity": "严重",
+      "phase": "交互-tab"
+    },
+    {
+      "name": "页签键盘 ← → Home End 可切换（含首尾环绕）",
+      "pass": true,
+      "detail": "→→idx1/focus1 →→idx2/focus2 End→idx4/focus4 Home→idx0/focus0 ←→idx4/focus4",
+      "severity": "建议",
+      "phase": "交互-tab"
+    },
+    {
+      "name": "建议工具：低精力 + 20 分钟 → 空态「没有合适的」",
+      "pass": true,
+      "detail": "按你现在的精力 / 环境，池子里没有合适的。真实应用里会告诉你为什么没有：可能时间不够，也可能精力、场景对不上——而不是笼统甩一句「暂无建议」。",
+      "severity": "严重",
+      "phase": "交互-建议"
+    },
+    {
+      "name": "建议工具：其余 5 组组合都出结果（1~3 条，每条带理由）",
+      "pass": true,
+      "detail": "低/45:1条 中/45:3条 高/20:1条 高/90:3条 中/90:3条",
+      "severity": "严重",
+      "phase": "交互-建议"
+    },
+    {
+      "name": "建议工具：不同组合结果会变化（非固定文案）",
+      "pass": true,
+      "detail": "低/20:[] ; 低/45:[读《被讨厌的勇气》] ; 中/45:[法学网课,读《被讨厌的勇气》,低冲击健身] ; 高/20:[英语单词] ; 高/90:[剪参赛视频,英语单词,法学网课] ; 中/90:[楼下散步,法学网课,读《被讨厌的勇气》]",
+      "severity": "建议",
+      "phase": "交互-建议"
+    },
+    {
+      "name": "建议工具：按钮 aria-pressed 同步（点击后每组全部按钮都有 true/false）",
+      "pass": true,
+      "detail": "低/20:on=3,pressedOk=true 低/45:on=3,pressedOk=true 中/45:on=3,pressedOk=true 高/20:on=3,pressedOk=true 高/90:on=3,pressedOk=true 中/90:on=3,pressedOk=true",
+      "severity": "建议",
+      "phase": "交互-建议"
+    },
+    {
+      "name": "建议工具：「现在有 N 分钟」文案随可支配变化",
+      "pass": true,
+      "detail": "现在有 90 分钟，可以试试：剪参赛视频合适交片还剩 3 天，做一点就少一点。英语单词时间有余「英语单词」断了 3 天，今天做一点就接上了。法学网课时间有余「法学网课」断了 2 天，今天做一点就接上了。它不会把今天已经排过、或者已经做完的事",
+      "severity": "建议",
+      "phase": "交互-建议"
+    },
+    {
+      "name": "导航锚点：点「拐点/怎么陪/功能/界面/隐私」能滚到区块且标题不被 sticky 头遮住",
+      "pass": true,
+      "detail": "#turn:secTop=84/top=231/navB=75 #loop:secTop=84/top=231/navB=75 #features:secTop=84/top=231/navB=75 #gallery:secTop=84/top=231/navB=75 #privacy:secTop=84/top=232/navB=75",
+      "severity": "严重",
+      "phase": "交互-锚点"
+    },
+    {
+      "name": "滚动时当前区块导航高亮跟随",
+      "pass": true,
+      "detail": "#turn:on=#turn #loop:on=#loop #features:on=#features #gallery:on=#gallery #privacy:on=#privacy",
+      "severity": "建议",
+      "phase": "交互-锚点"
+    },
+    {
+      "name": "页面底部没有错误高亮（避免把「隐私」错误标成当前区块）",
+      "pass": true,
+      "detail": "高亮=[]",
+      "severity": "建议",
+      "phase": "交互-锚点"
+    },
+    {
+      "name": "Tab 可依次聚焦主要控件（主题按钮 / 页签 / 链接）",
+      "pass": true,
+      "detail": "聚焦序列：A.btn → A.btn → A → A → A.skip-link → A.brand → A → A → A → A → A → BUTTON#themeBtn.theme-btn → A.btn → A.btn → A.btn → BUTTON → BUTTON → BUTTON.on",
+      "severity": "建议",
+      "phase": "可访问性"
+    },
+    {
+      "name": "键盘聚焦时 outline 可见（:focus-visible 生效）",
+      "pass": true,
+      "detail": "可见焦点数=28；A outline=solid 2px ; A outline=solid 2px ; A outline=solid 2px ; A outline=solid 2px ; A outline=solid 2px ; A outline=solid 2px ; A outline=solid 2px ; A outline=solid 2px",
+      "severity": "建议",
+      "phase": "可访问性"
+    },
+    {
+      "name": "768 宽（dark）无横向滚动",
+      "pass": true,
+      "detail": "scrollWidth=753 innerWidth=768",
+      "severity": "严重",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "768 宽（dark）无元素溢出视口",
+      "pass": true,
+      "detail": "[]",
+      "severity": "严重",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "768 宽（dark）无文字被截断",
+      "pass": true,
+      "detail": "[]",
+      "severity": "建议",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "768 宽（dark）CTA 按钮 / 手机截图 / 卡片 / 浮卡不破版（都在视口内）",
+      "pass": true,
+      "detail": "[]",
+      "severity": "严重",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "768 宽（dark）拐点标注「拐点」不压住图例文字",
+      "pass": true,
+      "detail": "无重叠",
+      "severity": "严重",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "768 宽（dark）滚到底：页脚完整、无横向滚动",
+      "pass": true,
+      "detail": "{\"footerLeft\":0,\"footerRight\":753,\"W\":768,\"noteBottom\":968,\"docH\":11013,\"scrollY\":9989,\"innerH\":1024,\"horizontal\":false}",
+      "severity": "严重",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "768 宽（dark）截图/图片全部加载",
+      "pass": true,
+      "detail": "14 张全部加载",
+      "severity": "严重",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "768 宽（light）无横向滚动",
+      "pass": true,
+      "detail": "scrollWidth=753 innerWidth=768",
+      "severity": "严重",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "768 宽（light）无元素溢出视口",
+      "pass": true,
+      "detail": "[]",
+      "severity": "严重",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "768 宽（light）无文字被截断",
+      "pass": true,
+      "detail": "[]",
+      "severity": "建议",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "768 宽（light）CTA 按钮 / 手机截图 / 卡片 / 浮卡不破版（都在视口内）",
+      "pass": true,
+      "detail": "[]",
+      "severity": "严重",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "768 宽（light）拐点标注「拐点」不压住图例文字",
+      "pass": true,
+      "detail": "无重叠",
+      "severity": "严重",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "768 宽（light）滚到底：页脚完整、无横向滚动",
+      "pass": true,
+      "detail": "{\"footerLeft\":0,\"footerRight\":753,\"W\":768,\"noteBottom\":968,\"docH\":11013,\"scrollY\":9989,\"innerH\":1024,\"horizontal\":false}",
+      "severity": "严重",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "768 宽（light）截图/图片全部加载",
+      "pass": true,
+      "detail": "14 张全部加载",
+      "severity": "严重",
+      "phase": "响应式 768"
+    },
+    {
+      "name": "375 宽（dark）无横向滚动",
+      "pass": true,
+      "detail": "scrollWidth=375 innerWidth=375",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽（dark）无元素溢出视口",
+      "pass": true,
+      "detail": "[]",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽（dark）无文字被截断",
+      "pass": true,
+      "detail": "[]",
+      "severity": "建议",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽（dark）CTA 按钮 / 手机截图 / 卡片 / 浮卡不破版（都在视口内）",
+      "pass": true,
+      "detail": "[]",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽（dark）拐点标注「拐点」不压住图例文字",
+      "pass": true,
+      "detail": "无重叠",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽（dark）滚到底：页脚完整、无横向滚动",
+      "pass": true,
+      "detail": "{\"footerLeft\":0,\"footerRight\":375,\"W\":375,\"noteBottom\":756,\"docH\":12495,\"scrollY\":11683,\"innerH\":812,\"horizontal\":false}",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽（dark）截图/图片全部加载",
+      "pass": true,
+      "detail": "14 张全部加载",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽（light）无横向滚动",
+      "pass": true,
+      "detail": "scrollWidth=375 innerWidth=375",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽（light）无元素溢出视口",
+      "pass": true,
+      "detail": "[]",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽（light）无文字被截断",
+      "pass": true,
+      "detail": "[]",
+      "severity": "建议",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽（light）CTA 按钮 / 手机截图 / 卡片 / 浮卡不破版（都在视口内）",
+      "pass": true,
+      "detail": "[]",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽（light）拐点标注「拐点」不压住图例文字",
+      "pass": true,
+      "detail": "无重叠",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽（light）滚到底：页脚完整、无横向滚动",
+      "pass": true,
+      "detail": "{\"footerLeft\":0,\"footerRight\":375,\"W\":375,\"noteBottom\":756,\"docH\":12495,\"scrollY\":11683,\"innerH\":812,\"horizontal\":false}",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽（light）截图/图片全部加载",
+      "pass": true,
+      "detail": "14 张全部加载",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽点按主题按钮可切换并记忆",
+      "pass": true,
+      "detail": "{\"theme\":\"light\",\"saved\":\"light\"}",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "375 宽点按页签可切换（aria-selected/panel 正确）",
+      "pass": true,
+      "detail": "false/false/true/false/false",
+      "severity": "严重",
+      "phase": "响应式 375"
+    },
+    {
+      "name": "demo/index.html 能独立打开并运行（state 对象 + window.PLAN + 无报错）",
+      "pass": true,
+      "detail": "{\"info\":{\"hasState\":true,\"planDays\":11,\"planMeta\":true,\"title\":\"陪伴 · 计划\",\"tasks\":0,\"tabs\":0,\"version\":\"v5\"},\"errors\":[]}",
+      "severity": "严重",
+      "phase": "demo"
+    },
+    {
+      "name": "file:// 直开：CSS 生效、图片加载、脚本运行",
+      "pass": true,
+      "detail": "{\"ready\":true,\"bodyBg\":\"rgb(20, 18, 28)\",\"nav\":\"sticky\",\"sheetOk\":true,\"imgs\":\"14/14\",\"broken\":[],\"scriptsRan\":true}",
+      "severity": "严重",
+      "phase": "file://"
+    },
+    {
+      "name": "file:// 直开：主题切换可用",
+      "pass": true,
+      "detail": "data-theme=light",
+      "severity": "严重",
+      "phase": "file://"
+    },
+    {
+      "name": "file:// 直开：demo 链接 href 可点且目标存在",
+      "pass": true,
+      "detail": "href=file:///C:/Users/Lenovo/Documents/deepseek-harness/default-workspace/%E7%BD%91%E9%A1%B5/companion-intro/demo/index.html",
+      "severity": "严重",
+      "phase": "file://"
+    },
+    {
+      "name": "file:// 直开：无 JS 报错",
+      "pass": true,
+      "detail": "无",
+      "severity": "严重",
+      "phase": "file://"
+    },
+    {
+      "name": "控制台/网络错误汇总（全流程）",
+      "pass": true,
+      "detail": "全程 192 个响应，0 报错",
+      "severity": "严重",
+      "phase": "控制台"
+    }
+  ],
+  "facts": [
+    {
+      "claim": "demo 副本是应用真实副本（可运行，11 天冲刺数据齐全）",
+      "status": "OK",
+      "note": "PLAN.days=11 version=v5"
+    },
+    {
+      "claim": "file:// 下 localStorage 行为",
+      "status": "OK",
+      "note": "localStorage 可用性=\"ok\"（file:// 下 Chrome 允许 localStorage；若异常已单独记录）"
+    }
+  ],
+  "contrast": {
+    "dark": [
+      {
+        "sel": ".hero-lead",
+        "ratio": 7.2,
+        "size": 13,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".hero-title",
+        "ratio": 15.62,
+        "size": 62.4,
+        "weight": 600,
+        "large": true,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".hero-sub",
+        "ratio": 7.2,
+        "size": 17.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".hero-note",
+        "ratio": 5.15,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(138, 131, 160)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".btn-primary",
+        "ratio": 6.22,
+        "size": 13,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(20, 18, 28)",
+        "bg": "rgb(139, 139, 240)"
+      },
+      {
+        "sel": ".btn-ghost",
+        "ratio": 15.62,
+        "size": 15,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".nav-links a",
+        "ratio": 7.2,
+        "size": 13.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".brand-name",
+        "ratio": 15.62,
+        "size": 17,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".theme-btn",
+        "ratio": 14.55,
+        "size": 16,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".section-head h2",
+        "ratio": 15.62,
+        "size": 49.6,
+        "weight": 600,
+        "large": true,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".section-lead p",
+        "ratio": 7.2,
+        "size": 16,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".turn-note h3",
+        "ratio": 15.62,
+        "size": 23.2,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".turn-note p",
+        "ratio": 7.2,
+        "size": 14.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".chart-legend",
+        "ratio": 6.71,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".chart-foot",
+        "ratio": 6.71,
+        "size": 14,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".chart-anno.anno-turn",
+        "ratio": 10.31,
+        "size": 12,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(240, 192, 126)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".step h3",
+        "ratio": 15.62,
+        "size": 19,
+        "weight": 700,
+        "large": true,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".step p",
+        "ratio": 7.2,
+        "size": 14.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".mini-task b",
+        "ratio": 13.64,
+        "size": 13,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(234, 235, 244)",
+        "bg": "rgb(31, 32, 41)"
+      },
+      {
+        "sel": ".mini-task span",
+        "ratio": 6.22,
+        "size": 11.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(154, 160, 181)",
+        "bg": "rgb(31, 32, 41)"
+      },
+      {
+        "sel": ".mini-task.done b",
+        "ratio": 13.64,
+        "size": 13,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(234, 235, 244)",
+        "bg": "rgb(31, 32, 41)"
+      },
+      {
+        "sel": ".feat h3",
+        "ratio": 15.62,
+        "size": 21.6,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".feat-copy",
+        "ratio": 7.2,
+        "size": 14.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".tool-label",
+        "ratio": 5.15,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(138, 131, 160)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".seg button",
+        "ratio": 6.05,
+        "size": 12.5,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(38, 33, 52)"
+      },
+      {
+        "sel": ".seg button.on",
+        "ratio": 5.79,
+        "size": 12.5,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(139, 139, 240)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".tool-now",
+        "ratio": 5.15,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(138, 131, 160)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".sugg-top b",
+        "ratio": 14.55,
+        "size": 14.5,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".sugg p",
+        "ratio": 6.71,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".tool-fine",
+        "ratio": 5.15,
+        "size": 11.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(138, 131, 160)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".quote-card",
+        "ratio": 14.55,
+        "size": 20.8,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".pool-list em",
+        "ratio": 4.8,
+        "size": 12,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(138, 131, 160)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".sprint-line",
+        "ratio": 4.8,
+        "size": 12,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(138, 131, 160)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".sprint-line b",
+        "ratio": 14.55,
+        "size": 12,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".feat-note",
+        "ratio": 4.8,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(138, 131, 160)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".tab",
+        "ratio": 6.22,
+        "size": 13.5,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(20, 18, 28)",
+        "bg": "rgb(139, 139, 240)"
+      },
+      {
+        "sel": ".tab.on",
+        "ratio": 6.22,
+        "size": 13.5,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(20, 18, 28)",
+        "bg": "rgb(139, 139, 240)"
+      },
+      {
+        "sel": ".shot figcaption",
+        "ratio": 7.2,
+        "size": 13.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".shot figcaption b",
+        "ratio": 15.62,
+        "size": 14,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".shot-side p",
+        "ratio": 7.2,
+        "size": 14,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".shot-side-note",
+        "ratio": 5.15,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(138, 131, 160)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".who-col h3",
+        "ratio": 6.22,
+        "size": 14.5,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(139, 139, 240)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".check-list li",
+        "ratio": 15.62,
+        "size": 14.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".cross-list li",
+        "ratio": 7.2,
+        "size": 14.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".who-quote",
+        "ratio": 15.62,
+        "size": 32,
+        "weight": 600,
+        "large": true,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".privacy-points b",
+        "ratio": 13.69,
+        "size": 14.5,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(34, 30, 46)"
+      },
+      {
+        "sel": ".privacy-points span",
+        "ratio": 6.31,
+        "size": 13.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(34, 30, 46)"
+      },
+      {
+        "sel": ".local-label",
+        "ratio": 4.8,
+        "size": 11.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(138, 131, 160)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".local-card code",
+        "ratio": 5.79,
+        "size": 12,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(139, 139, 240)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".local-card em",
+        "ratio": 6.71,
+        "size": 12,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(28, 25, 38)"
+      },
+      {
+        "sel": ".cloud-card",
+        "ratio": 4.51,
+        "size": 13,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(138, 131, 160)",
+        "bg": "rgb(34, 30, 46)"
+      },
+      {
+        "sel": ".cta-kicker",
+        "ratio": 6.22,
+        "size": 13,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(139, 139, 240)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".cta-title",
+        "ratio": 15.62,
+        "size": 67.2,
+        "weight": 600,
+        "large": true,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".cta-sub",
+        "ratio": 7.2,
+        "size": 15,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".cta-note",
+        "ratio": 5.15,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(138, 131, 160)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".footer-desc",
+        "ratio": 7.2,
+        "size": 13,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".footer-links a",
+        "ratio": 15.62,
+        "size": 13,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(237, 234, 246)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".footer-note",
+        "ratio": 5.15,
+        "size": 12,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(138, 131, 160)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".footer-ver",
+        "ratio": 5.15,
+        "size": 11,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(138, 131, 160)",
+        "bg": "rgb(20, 18, 28)"
+      },
+      {
+        "sel": ".skin figcaption",
+        "ratio": 7.2,
+        "size": 12,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(164, 158, 184)",
+        "bg": "rgb(20, 18, 28)"
+      }
+    ],
+    "light": [
+      {
+        "sel": ".hero-lead",
+        "ratio": 5.39,
+        "size": 13,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".hero-title",
+        "ratio": 12.78,
+        "size": 62.4,
+        "weight": 600,
+        "large": true,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".hero-sub",
+        "ratio": 5.39,
+        "size": 17.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".hero-note",
+        "ratio": 4.72,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(112, 104, 92)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".btn-primary",
+        "ratio": 6.15,
+        "size": 13,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(255, 255, 255)",
+        "bg": "rgb(90, 80, 200)"
+      },
+      {
+        "sel": ".btn-ghost",
+        "ratio": 12.78,
+        "size": 15,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".nav-links a",
+        "ratio": 5.39,
+        "size": 13.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".brand-name",
+        "ratio": 12.78,
+        "size": 17,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".theme-btn",
+        "ratio": 13.93,
+        "size": 16,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".section-head h2",
+        "ratio": 12.78,
+        "size": 49.6,
+        "weight": 600,
+        "large": true,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".section-lead p",
+        "ratio": 5.39,
+        "size": 16,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".turn-note h3",
+        "ratio": 12.78,
+        "size": 23.2,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".turn-note p",
+        "ratio": 5.39,
+        "size": 14.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".chart-legend",
+        "ratio": 5.88,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".chart-foot",
+        "ratio": 5.88,
+        "size": 14,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".chart-anno.anno-turn",
+        "ratio": 5.05,
+        "size": 12,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(143, 97, 28)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".step h3",
+        "ratio": 12.78,
+        "size": 19,
+        "weight": 700,
+        "large": true,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".step p",
+        "ratio": 5.39,
+        "size": 14.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".mini-task b",
+        "ratio": 13.64,
+        "size": 13,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(234, 235, 244)",
+        "bg": "rgb(31, 32, 41)"
+      },
+      {
+        "sel": ".mini-task span",
+        "ratio": 6.22,
+        "size": 11.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(154, 160, 181)",
+        "bg": "rgb(31, 32, 41)"
+      },
+      {
+        "sel": ".mini-task.done b",
+        "ratio": 13.64,
+        "size": 13,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(234, 235, 244)",
+        "bg": "rgb(31, 32, 41)"
+      },
+      {
+        "sel": ".feat h3",
+        "ratio": 12.78,
+        "size": 21.6,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".feat-copy",
+        "ratio": 5.39,
+        "size": 14.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".tool-label",
+        "ratio": 4.72,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(112, 104, 92)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".seg button",
+        "ratio": 4.8,
+        "size": 12.5,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(233, 224, 209)"
+      },
+      {
+        "sel": ".seg button.on",
+        "ratio": 5.75,
+        "size": 12.5,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(90, 80, 200)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".tool-now",
+        "ratio": 4.72,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(112, 104, 92)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".sugg-top b",
+        "ratio": 13.93,
+        "size": 14.5,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".sugg p",
+        "ratio": 5.88,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".tool-fine",
+        "ratio": 4.72,
+        "size": 11.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(112, 104, 92)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".quote-card",
+        "ratio": 13.93,
+        "size": 20.8,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".pool-list em",
+        "ratio": 5.14,
+        "size": 12,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(112, 104, 92)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".sprint-line",
+        "ratio": 5.14,
+        "size": 12,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(112, 104, 92)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".sprint-line b",
+        "ratio": 13.93,
+        "size": 12,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".feat-note",
+        "ratio": 5.14,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(112, 104, 92)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".tab",
+        "ratio": 6.15,
+        "size": 13.5,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(255, 255, 255)",
+        "bg": "rgb(90, 80, 200)"
+      },
+      {
+        "sel": ".tab.on",
+        "ratio": 6.15,
+        "size": 13.5,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(255, 255, 255)",
+        "bg": "rgb(90, 80, 200)"
+      },
+      {
+        "sel": ".shot figcaption",
+        "ratio": 5.39,
+        "size": 13.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".shot figcaption b",
+        "ratio": 12.78,
+        "size": 14,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".shot-side p",
+        "ratio": 5.39,
+        "size": 14,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".shot-side-note",
+        "ratio": 4.72,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(112, 104, 92)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".who-col h3",
+        "ratio": 5.28,
+        "size": 14.5,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(90, 80, 200)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".check-list li",
+        "ratio": 12.78,
+        "size": 14.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".cross-list li",
+        "ratio": 5.39,
+        "size": 14.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".who-quote",
+        "ratio": 12.78,
+        "size": 32,
+        "weight": 600,
+        "large": true,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".privacy-points b",
+        "ratio": 13.02,
+        "size": 14.5,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(246, 239, 227)"
+      },
+      {
+        "sel": ".privacy-points span",
+        "ratio": 5.49,
+        "size": 13.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(246, 239, 227)"
+      },
+      {
+        "sel": ".local-label",
+        "ratio": 5.14,
+        "size": 11.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(112, 104, 92)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".local-card code",
+        "ratio": 5.75,
+        "size": 12,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(90, 80, 200)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".local-card em",
+        "ratio": 5.88,
+        "size": 12,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(251, 247, 239)"
+      },
+      {
+        "sel": ".cloud-card",
+        "ratio": 4.81,
+        "size": 13,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(112, 104, 92)",
+        "bg": "rgb(246, 239, 227)"
+      },
+      {
+        "sel": ".cta-kicker",
+        "ratio": 5.28,
+        "size": 13,
+        "weight": 700,
+        "large": false,
+        "fg": "rgb(90, 80, 200)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".cta-title",
+        "ratio": 12.78,
+        "size": 67.2,
+        "weight": 600,
+        "large": true,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".cta-sub",
+        "ratio": 5.39,
+        "size": 15,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".cta-note",
+        "ratio": 4.72,
+        "size": 12.5,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(112, 104, 92)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".footer-desc",
+        "ratio": 5.39,
+        "size": 13,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".footer-links a",
+        "ratio": 12.78,
+        "size": 13,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(42, 37, 51)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".footer-note",
+        "ratio": 4.72,
+        "size": 12,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(112, 104, 92)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".footer-ver",
+        "ratio": 4.72,
+        "size": 11,
+        "weight": 600,
+        "large": false,
+        "fg": "rgb(112, 104, 92)",
+        "bg": "rgb(243, 237, 227)"
+      },
+      {
+        "sel": ".skin figcaption",
+        "ratio": 5.39,
+        "size": 12,
+        "weight": 400,
+        "large": false,
+        "fg": "rgb(103, 95, 85)",
+        "bg": "rgb(243, 237, 227)"
+      }
+    ]
+  },
+  "shots": [
+    "1440-dark-hero.png",
+    "1440-dark-turn.png",
+    "1440-dark-turn-2.png",
+    "1440-dark-loop.png",
+    "1440-dark-features.png",
+    "1440-dark-features-2.png",
+    "1440-dark-skins.png",
+    "1440-dark-gallery.png",
+    "1440-dark-gallery-2.png",
+    "1440-dark-who.png",
+    "1440-dark-privacy.png",
+    "1440-dark-cta.png",
+    "1440-dark-footer.png",
+    "1440-dark-fullpage.png",
+    "1440-light-hero.png",
+    "1440-light-turn.png",
+    "1440-light-turn-2.png",
+    "1440-light-loop.png",
+    "1440-light-features.png",
+    "1440-light-features-2.png",
+    "1440-light-skins.png",
+    "1440-light-gallery.png",
+    "1440-light-gallery-2.png",
+    "1440-light-who.png",
+    "1440-light-privacy.png",
+    "1440-light-cta.png",
+    "1440-light-footer.png",
+    "1440-light-fullpage.png",
+    "gallery-tab-冲刺.png",
+    "768-dark-hero.png",
+    "768-dark-turn.png",
+    "768-dark-loop.png",
+    "768-dark-features.png",
+    "768-dark-features-2.png",
+    "768-dark-skins.png",
+    "768-dark-gallery.png",
+    "768-dark-gallery-2.png",
+    "768-dark-who.png",
+    "768-dark-privacy.png",
+    "768-dark-cta.png",
+    "768-dark-footer.png",
+    "768-dark-bottom-footer.png",
+    "768-light-hero.png",
+    "768-light-turn.png",
+    "768-light-loop.png",
+    "768-light-features.png",
+    "768-light-features-2.png",
+    "768-light-skins.png",
+    "768-light-gallery.png",
+    "768-light-gallery-2.png",
+    "768-light-who.png",
+    "768-light-privacy.png",
+    "768-light-cta.png",
+    "768-light-footer.png",
+    "768-light-bottom-footer.png",
+    "375-dark-hero.png",
+    "375-dark-hero-2.png",
+    "375-dark-turn.png",
+    "375-dark-turn-2.png",
+    "375-dark-loop.png",
+    "375-dark-loop-2.png",
+    "375-dark-features.png",
+    "375-dark-features-2.png",
+    "375-dark-skins.png",
+    "375-dark-gallery.png",
+    "375-dark-gallery-2.png",
+    "375-dark-who.png",
+    "375-dark-who-2.png",
+    "375-dark-privacy.png",
+    "375-dark-privacy-2.png",
+    "375-dark-cta.png",
+    "375-dark-footer.png",
+    "375-dark-bottom-footer.png",
+    "375-light-hero.png",
+    "375-light-hero-2.png",
+    "375-light-turn.png",
+    "375-light-turn-2.png",
+    "375-light-loop.png",
+    "375-light-loop-2.png",
+    "375-light-features.png",
+    "375-light-features-2.png",
+    "375-light-skins.png",
+    "375-light-gallery.png",
+    "375-light-gallery-2.png",
+    "375-light-who.png",
+    "375-light-who-2.png",
+    "375-light-privacy.png",
+    "375-light-privacy-2.png",
+    "375-light-cta.png",
+    "375-light-footer.png",
+    "375-light-bottom-footer.png",
+    "file-protocol-top.png"
+  ],
+  "consoleErrors": [],
+  "httpErrors": []
+}
