@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>陪伴 · 计划 —— 计划不是死在开头，是死在中间</title>
+<meta name="description" content="陪伴·计划：把一天的空隙拆成今天就能做完的最小动作，断了就接回来。纯前端、零依赖，数据只存在你自己的浏览器里。">
+<meta name="theme-color" content="#14121C">
+<meta property="og:title" content="陪伴 · 计划 —— 计划不是死在开头，是死在中间">
+<meta property="og:description" content="把碎片时间拆成今天就能做完的最小动作，断了就接回来。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero-today.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="assets/hero-today.png">
+<link rel="stylesheet" href="styles.css">
+<script>
+/* 在样式生效前定好主题，避免深色页面闪一下白 */
+(function () {
+  try {
+    var saved = localStorage.getItem("companion-intro-theme");
+    if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
+  } catch (e) {}
+})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="陪伴·计划，回到顶部">
+      <span class="brand-mark" aria-hidden="true">✓</span>
+      <span class="brand-name">陪伴<em>·</em>计划</span>
+    </a>
+    <nav class="nav-links" aria-label="页面导航">
+      <a href="#turn">拐点</a>
+      <a href="#loop">怎么陪</a>
+      <a href="#features">功能</a>
+      <a href="#gallery">界面</a>
+      <a href="#privacy">隐私</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="切换界面风格">
+        <svg class="i i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 12H2M22 12h-2.2M5.6 5.6l1.6 1.6M16.8 16.8l1.6 1.6M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6"/></svg>
+        <svg class="i i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 14.4A8.4 8.4 0 0 1 9.6 3.8a8.4 8.4 0 1 0 10.6 10.6Z"/></svg>
+      </button>
+      <a class="btn btn-primary btn-nav" href="demo/index.html" target="_blank" rel="noopener">打开应用</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ========== 首屏 ========== -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="hero-lead">一个陪你在碎片时间里，把想做的事一点点推进的应用</p>
+        <h1 class="hero-title">计划不是死在开头，<br>是死在中间。</h1>
+        <p class="hero-sub">「陪伴·计划」把一天的空隙拆成今天就能做完的小动作。断了没关系——断的第一天，它把你接回来。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="demo/index.html" target="_blank" rel="noopener">打开应用</a>
+          <a class="btn btn-ghost btn-lg" href="#gallery">先看看界面</a>
+        </div>
+        <p class="hero-note">不用注册，不用联网。数据只存在你自己的浏览器里。</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="phone phone-hero">
+          <div class="phone-screen">
+            <img src="assets/hero-today.png" width="390" height="844" alt="应用今日视图：今日概览、空闲时间段、今日计划" fetchpriority="high">
+          </div>
+        </div>
+        <figure class="float-card">
+          <span class="float-kicker">空余时间建议</span>
+          <p class="float-title">英语单词 <span class="fit">刚刚好</span></p>
+          <p class="float-reason">「英语单词」断了 3 天，今天做一点就接上了。</p>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 拐点 ========== -->
+  <section class="section turn" id="turn">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>大多数计划，<br>都死在中间那一段。</h2>
+        <div class="section-lead">
+          <p>开头新鲜，结尾有盼头。中间是重复、枯燥、看不到头。断一次，就再也捡不起来。</p>
+          <p>这个点，我们叫它<strong>拐点</strong>。这个应用就是围着它做的。</p>
+        </div>
+      </header>
+
+      <div class="chart-card" id="turnChart">
+        <div class="chart-head">
+          <div class="chart-legend">
+            <span><i class="legend-dot legend-muted" aria-hidden="true"></i>普通待办</span>
+            <span><i class="legend-dot legend-brand" aria-hidden="true"></i>陪伴 · 计划</span>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <svg class="turn-chart" viewBox="0 0 920 340" role="img" aria-label="曲线对比：普通待办在断档后归零；陪伴·计划在断档第一天重新接上，慢慢回到原来的节奏">
+            <defs>
+              <linearGradient id="areaBrand" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" style="stop-color:var(--brand);stop-opacity:.20"/>
+                <stop offset="1" style="stop-color:var(--brand);stop-opacity:0"/>
+              </linearGradient>
+            </defs>
+            <line class="chart-axis" x1="40" y1="298" x2="880" y2="298"/>
+            <line class="chart-drop" x1="410" y1="70" x2="410" y2="298"/>
+            <path class="chart-muted" d="M40 270 C120 236 190 214 260 222 C320 229 360 262 420 298 L880 298"/>
+            <path class="chart-area" d="M40 270 C120 236 190 214 260 222 C320 229 360 264 410 292 C450 308 490 300 530 268 C590 220 660 196 880 178 L880 340 L40 340 Z"/>
+            <path class="chart-brand" pathLength="1" d="M40 270 C120 236 190 214 260 222 C320 229 360 264 410 292 C450 308 490 300 530 268 C590 220 660 196 880 178"/>
+            <circle class="chart-dot dot-start" cx="40" cy="270" r="4"/>
+            <circle class="chart-dot dot-junction" cx="410" cy="292" r="5"/>
+            <circle class="chart-dot dot-reconnect" cx="530" cy="268" r="7"/>
+            <circle class="chart-dot dot-end" cx="880" cy="178" r="4"/>
+          </svg>
+          <span class="chart-anno anno-turn">拐点</span>
+          <span class="chart-anno anno-reconnect">断的第 1 天<br><b>把你接回来</b></span>
+        </div>
+        <p class="chart-foot">普通待办在这里记一次失败，欠账越滚越多。它在这里只做一件事：<b>把你接回去。</b>不补前天，不补昨天，今天做一点就算接上。</p>
+      </div>
+
+      <div class="turn-notes">
+        <div class="turn-note">
+          <h3>接回来，不等于还债</h3>
+          <p>前天没做的、昨天没做的，通通不用补。今天只做今天这一份。很多人放弃，不是因为懒，是断了一次之后，看着欠的越来越多，干脆不还了。这里不让你欠。</p>
+        </div>
+        <div class="turn-note">
+          <h3>只问最小那件事</h3>
+          <p>它不问「你今天能不能学两小时」，只问「现在这二十分钟，做哪件最合适」。做完就算赢，接上就算数。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 一天里只做三件事 ========== -->
+  <section class="section loop" id="loop">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>一天里，<br>它只做三件事。</h2>
+        <div class="section-lead">
+          <p>没有复杂的设置，也不用每天重新排。填一次作息，之后打开就能用。</p>
+        </div>
+      </header>
+
+      <ol class="steps">
+        <li class="step">
+          <div class="step-body">
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3>把你没空的时间填进去</h3>
+            <p>上课、上班、吃饭、睡觉，填进作息。它自己反推出你真正空着的碎片，不用一个个手填。</p>
+          </div>
+          <div class="mini mini-schedule" aria-hidden="true">
+            <div class="mini-top"><span>今日空闲时间段</span><em>从作息生成</em></div>
+            <div class="mini-frag"><b>06:25–08:00</b><span>1h35m</span></div>
+            <div class="mini-frag"><b>13:00–14:00</b><span>1h</span></div>
+            <div class="mini-frag"><b>19:00–22:00</b><span>3h</span></div>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-body">
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3>一键导入今天该做的</h3>
+            <p>点一下「一键导入」，到期该做的习惯、今天到期的事就进今日计划，再自动排进空闲碎片。不用每天重填一遍。</p>
+          </div>
+          <div class="mini mini-tasks" aria-hidden="true">
+            <div class="mini-top"><span>今日计划</span><em>一键导入</em></div>
+            <div class="mini-task"><i></i><div><b>日常 · 英语单词</b><span>20m · 19:00–19:20</span></div></div>
+            <div class="mini-task done"><i>✓</i><div><b>日常 · 法学网课</b><span>实际 30m（预计 30m）</span></div></div>
+            <div class="mini-task done"><i>✓</i><div><b>日常 · CTF-Web</b><span>实际 50m（预计 60m）</span></div></div>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-body">
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3>勾掉，然后回来</h3>
+            <p>勾掉时记下实际花了多久。提前做完省下的时间会回到「可支配」里，再问你要不要拿它做点别的。</p>
+          </div>
+          <div class="mini mini-cheer" aria-hidden="true">
+            <div class="mini-check"><i>✓</i><div><b>英语单词</b><span>实际 20m（预计 30m）</span></div></div>
+            <div class="mini-toast">这一件拿下</div>
+            <div class="mini-sugg"><span>空余时间建议</span><b>还剩 2h10m 可支配</b></div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ========== 功能 ========== -->
+  <section class="section features" id="features">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>勾完之后，<br>它还会多问一句。</h2>
+        <div class="section-lead">
+          <p>普通待办到你打完勾就结束了。它多做一步：算算你手头还剩多少时间，再从你想做的事里，挑一件现在就能做的。</p>
+        </div>
+      </header>
+
+      <div class="bento">
+        <article class="feat feat-suggest">
+          <h3>空余时间建议</h3>
+          <p class="feat-copy">提前做完，或者临时多出半小时——它会按「时长够不够 → 精力场景合不合适 → 哪件事更急」排个序，给你前几条，每条都带一句理由。</p>
+
+          <div class="suggest-tool" id="suggestTool">
+            <div class="tool-row">
+              <div class="tool-field">
+                <span class="tool-label">精力</span>
+                <div class="seg" role="group" aria-label="选择现在的精力">
+                  <button type="button" data-field="energy" data-v="低" aria-pressed="false">低</button>
+                  <button type="button" data-field="energy" data-v="中" aria-pressed="false">中</button>
+                  <button type="button" data-field="energy" data-v="高" class="on" aria-pressed="true">高</button>
+                </div>
+              </div>
+              <div class="tool-field">
+                <span class="tool-label">场景</span>
+                <div class="seg" role="group" aria-label="选择现在的场景">
+                  <button type="button" data-field="scene" data-v="室内" class="on" aria-pressed="true">室内</button>
+                  <button type="button" data-field="scene" data-v="可外出" aria-pressed="false">可外出</button>
+                </div>
+              </div>
+            </div>
+            <div class="tool-row">
+              <div class="tool-field">
+                <span class="tool-label">可支配</span>
+                <div class="seg" role="group" aria-label="选择可支配时间">
+                  <button type="button" data-field="mins" data-v="20" aria-pressed="false">20 分钟</button>
+                  <button type="button" data-field="mins" data-v="45" class="on" aria-pressed="true">45 分钟</button>
+                  <button type="button" data-field="mins" data-v="90" aria-pressed="false">90 分钟</button>
+                </div>
+              </div>
+            </div>
+            <div class="tool-out" id="suggestOut" aria-live="polite">
+              <p class="tool-now">现在有 45 分钟，可以试试：</p>
+              <div class="sugg">
+                <div class="sugg-top"><b>英语单词</b><span class="fit">合适</span></div>
+                <p>「英语单词」断了 3 天，今天做一点就接上了。</p>
+              </div>
+              <div class="sugg">
+                <div class="sugg-top"><b>法学网课</b><span class="fit">刚刚好</span></div>
+                <p>「法学网课」断了 2 天，今天做一点就接上了。</p>
+              </div>
+              <div class="sugg">
+                <div class="sugg-top"><b>读《被讨厌的勇气》</b><span class="fit">刚刚好</span></div>
+                <p>「读《被讨厌的勇气》」还没开始，今天开个头。</p>
+              </div>
+            </div>
+            <p class="tool-fine">这是把应用里的规则引擎做成的简化演示；真实版本读的是你自己的事项池。</p>
+          </div>
+        </article>
+
+        <article class="feat feat-knot">
+          <h3>断档即接回</h3>
+          <p class="feat-copy">断了几天，打开就能看到。它不会冷冰冰甩一句「你该做了」，而是告诉你：今天做一点，就接上了。</p>
+          <blockquote class="quote-card">「英语单词」断了 3 天，<br>今天做一点就接上了。</blockquote>
+          <div class="reconnect" aria-hidden="true">
+            <div class="rc-item"><span>断了 3 天</span><em>不用补</em></div>
+            <div class="rc-track"><i></i></div>
+            <div class="rc-item rc-join"><span>今天 20 分钟</span><em>接上就行</em></div>
+          </div>
+          <p class="feat-note">它记得你断了多久，也记得你上次做到哪天。</p>
+        </article>
+
+        <article class="feat feat-energy">
+          <h3>精力有数，不逼打鸡血</h3>
+          <p class="feat-copy">它不喊「加油你能行」。开建议之前先问你现在的精力和环境，不合适的不推给你，只给现在做得了的。</p>
+          <div class="seg-mock" aria-hidden="true">
+            <div><span>精力</span><i>低</i><i class="on">中</i><i>高</i></div>
+            <div><span>场景</span><i class="on">室内</i><i>可外出</i></div>
+          </div>
+        </article>
+
+        <article class="feat feat-pool">
+          <h3>事项池</h3>
+          <p class="feat-copy">把想做的事先存起来。每件标好最短时长、精力、场景，以及它是「快到截止日」还是「隔几天该做一次」——建议就是从这儿挑的。</p>
+          <ul class="pool-list">
+            <li><span>英语单词</span><em>≥20 分钟 · 每天</em></li>
+            <li><span>剪参赛视频</span><em>交片还剩 3 天</em></li>
+            <li><span>低冲击健身</span><em>≥30 分钟 · 隔 2 天</em></li>
+          </ul>
+        </article>
+
+        <article class="feat feat-sprint">
+          <h3>考前冲刺</h3>
+          <p class="feat-copy">考前 11 天，每天一份考点配额：高频、星级、一句话要点都在。没勾完的自动顺延，低星考点可以一键让位，考试当天切到扫读视图。</p>
+          <div class="sprint-mock" aria-hidden="true">
+            <div class="sprint-bar"><i style="width:46%"></i></div>
+            <div class="sprint-line"><b>第 4 天</b><span>选择题 + 三星考点</span></div>
+            <div class="sprint-line"><b>距首场考试 8 天</b><span>已勾 96 / 210</span></div>
+          </div>
+        </article>
+
+        <article class="feat feat-more">
+          <h3>还有这些</h3>
+          <ul class="more-list">
+            <li><b>周视图</b><span>连续打卡几天、这周完成了多少、未来 7 天该做的事和截止日</span></li>
+            <li><b>记事本</b><span>随手记，清单能打勾划掉</span></li>
+            <li><b>本地反馈</b><span>报告在你本机拼好，带什么、删什么、发不发，都由你</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="skins">
+        <div class="skins-head">
+          <h3>同一个应用，四套暗色皮肤</h3>
+          <p>紫藤 / 青竹 / 暖阳 / 墨蓝。晚上看不会晃眼，设置里一点就换。</p>
+        </div>
+        <div class="skin-row">
+          <figure class="skin">
+            <div class="phone phone-mini"><div class="phone-screen"><img src="assets/hero-today.png" width="390" height="844" alt="紫藤皮肤下的今日视图" loading="lazy"></div></div>
+            <figcaption>紫藤</figcaption>
+          </figure>
+          <figure class="skin">
+            <div class="phone phone-mini"><div class="phone-screen"><img src="assets/theme-teal.png" width="390" height="844" alt="青竹皮肤下的今日视图" loading="lazy"></div></div>
+            <figcaption>青竹</figcaption>
+          </figure>
+          <figure class="skin">
+            <div class="phone phone-mini"><div class="phone-screen"><img src="assets/theme-amber.png" width="390" height="844" alt="暖阳皮肤下的今日视图" loading="lazy"></div></div>
+            <figcaption>暖阳</figcaption>
+          </figure>
+          <figure class="skin">
+            <div class="phone phone-mini"><div class="phone-screen"><img src="assets/theme-ink.png" width="390" height="844" alt="墨蓝皮肤下的今日视图" loading="lazy"></div></div>
+            <figcaption>墨蓝</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 界面巡览 ========== -->
+  <section class="section gallery" id="gallery">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>它长这样。</h2>
+        <div class="section-lead">
+          <p>下面全是应用的真实截图，不是设计稿。点上面的页签换一组看。</p>
+        </div>
+      </header>
+
+      <div class="tabs" role="tablist" aria-label="应用界面截图分类">
+        <button class="tab on" role="tab" id="tab-today" aria-controls="panel-today" aria-selected="true">今天</button>
+        <button class="tab" role="tab" id="tab-plan" aria-controls="panel-plan" aria-selected="false" tabindex="-1">计划与作息</button>
+        <button class="tab" role="tab" id="tab-week" aria-controls="panel-week" aria-selected="false" tabindex="-1">一周</button>
+        <button class="tab" role="tab" id="tab-sprint" aria-controls="panel-sprint" aria-selected="false" tabindex="-1">冲刺</button>
+        <button class="tab" role="tab" id="tab-settings" aria-controls="panel-settings" aria-selected="false" tabindex="-1">设置</button>
+      </div>
+
+      <div class="panels">
+        <div class="panel on" role="tabpanel" id="panel-today" aria-labelledby="tab-today">
+          <figure class="shot">
+            <div class="phone phone-shot"><div class="phone-screen"><img src="assets/today-tasks.png" width="390" height="844" alt="今日计划列表：日常习惯已自动列出，两条已完成并显示实际耗时" loading="lazy"></div></div>
+            <figcaption><b>今日计划</b>日常习惯自动列进来，勾掉时记下实际耗时；提前做完省下的时间会回到「可支配」。</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="phone phone-shot"><div class="phone-screen"><img src="assets/suggest.png" width="390" height="844" alt="空余时间建议：可支配 42 分钟，三条带理由的建议卡片" loading="lazy"></div></div>
+            <figcaption><b>空余时间建议</b>每条都带一句理由：断了几天、还剩几天，或者最近在坚持。</figcaption>
+          </figure>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-plan" aria-labelledby="tab-plan" hidden>
+          <figure class="shot">
+            <div class="phone phone-shot"><div class="phone-screen"><img src="assets/backlog.png" width="390" height="844" alt="事项池：七个事项，每个带优先级、最短时长、精力、场景标签" loading="lazy"></div></div>
+            <figcaption><b>事项池</b>每个事项标好最短时长、精力、场景和优先级，建议从这里挑。</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="phone phone-shot"><div class="phone-screen"><img src="assets/schedule.png" width="390" height="844" alt="作息页：固定占用按工作日、休息日、每天分组" loading="lazy"></div></div>
+            <figcaption><b>作息</b>填好每天固定的没空时间，它反推出真正空着的碎片。</figcaption>
+          </figure>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-week" aria-labelledby="tab-week" hidden>
+          <figure class="shot">
+            <div class="phone phone-shot"><div class="phone-screen"><img src="assets/week.png" width="390" height="844" alt="周视图：本周统计和未来 7 天的截止日与习惯" loading="lazy"></div></div>
+            <figcaption><b>周视图</b>连续打卡几天、这周完成了多少，还有未来 7 天该做的事和截止日。</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="phone phone-shot"><div class="phone-screen"><img src="assets/notes.png" width="390" height="844" alt="记事本：带勾选的清单和普通文字笔记" loading="lazy"></div></div>
+            <figcaption><b>记事本</b>随手记。清单能打勾划掉，文字就安安静静放着。</figcaption>
+          </figure>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-sprint" aria-labelledby="tab-sprint" hidden>
+          <figure class="shot">
+            <div class="phone phone-shot"><div class="phone-screen"><img src="assets/sprint.png" width="390" height="844" alt="冲刺计划：第 1 天配额，按科目分组的考点" loading="lazy"></div></div>
+            <figcaption><b>冲刺计划</b>考前 11 天，每天一份考点配额，按科目分组，勾掉即计入进度。</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="phone phone-shot"><div class="phone-screen"><img src="assets/sprint-exam.png" width="390" height="844" alt="考试日视图：考试安排与当天科目高频扫读" loading="lazy"></div></div>
+            <figcaption><b>考试日</b>当天切到扫读视图：考什么、几点考、看哪些高频点。</figcaption>
+          </figure>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-settings" aria-labelledby="tab-settings" hidden>
+          <figure class="shot">
+            <div class="phone phone-shot"><div class="phone-screen"><img src="assets/settings.png" width="390" height="844" alt="设置弹窗：一键导入方式、鼓励频率、四套暗色皮肤" loading="lazy"></div></div>
+            <figcaption><b>设置</b>一键导入的方式、勾掉任务时的鼓励频率、四套暗色皮肤，都在这儿。</figcaption>
+          </figure>
+          <div class="shot-side">
+            <h3>它没打算让你配置一整天</h3>
+            <p>设置里只有几项：导入方式、鼓励频率、界面颜色。剩下的交给规则，你只管今天做哪几件。</p>
+            <p class="shot-side-note">应用目前没有任何云同步和账号体系。换设备要重新填，这是刻意换来的简单。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 写给谁 ========== -->
+  <section class="section who" id="who">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>写给谁，<br>不写给谁。</h2>
+      </header>
+      <div class="who-grid">
+        <div class="who-col">
+          <h3>如果你是这样，它会帮上忙</h3>
+          <ul class="check-list">
+            <li>白天被课和工占满，只剩通勤、午休、睡前这些碎片</li>
+            <li>同时想推进好几条线：考试、技能、健康，都想管一点</li>
+            <li>做过计划，但总在中间断掉，断了就再也捡不起来</li>
+            <li>不想再注册一个账号，也不想把自己的时间数据交出去</li>
+          </ul>
+        </div>
+        <div class="who-col who-col-no">
+          <h3>如果你想要这些，它现在给不了</h3>
+          <ul class="cross-list">
+            <li>甘特图、多人协作、云端同步</li>
+            <li>精确到分钟的重度项目管理</li>
+            <li>排行榜、连续打卡勋章这类激励</li>
+            <li>每天两小时起步的硬核计划——它只做「今天做一点」</li>
+          </ul>
+        </div>
+      </div>
+      <blockquote class="who-quote">它现在还很轻，只解决一件事：<br>让你在拐点那一下，别掉下去。</blockquote>
+    </div>
+  </section>
+
+  <!-- ========== 数据与隐私 ========== -->
+  <section class="section privacy" id="privacy">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>你的数据，<br>不上路。</h2>
+        <div class="section-lead">
+          <p>这个应用没有服务器。今日计划、事项池、勾选记录、记事，全部存在你浏览器的 localStorage 里，刷新不丢，关掉还在。</p>
+        </div>
+      </header>
+      <div class="privacy-grid">
+        <ul class="privacy-points">
+          <li><b>不用注册</b><span>打开就能用，没有账号，也没有登录页。</span></li>
+          <li><b>没有统计</b><span>应用本身没接统计脚本，这个介绍页也没有。</span></li>
+          <li><b>反馈由你决定</b><span>要提问题时，报告在你本机拼好：版本、环境、各模块数量。事项名、笔记、勾了哪些考点都不会被带上，哪一行不想发就删掉。</span></li>
+        </ul>
+        <div class="privacy-visual" aria-label="数据显示示意：所有数据只存在本地浏览器">
+          <div class="local-card">
+            <span class="local-label">只在这台设备上</span>
+            <ul>
+              <li><code>companion-plan-v2</code><em>今日计划 · 事项池 · 记事</em></li>
+              <li><code>companion-sprint-v1</code><em>冲刺勾选 · 考试安排</em></li>
+              <li><code>companion-settings</code><em>鼓励 · 休息日 · 导入方式</em></li>
+              <li><code>companion-theme</code><em>界面颜色</em></li>
+            </ul>
+          </div>
+          <div class="cloud-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18.5a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 8.7a4 4 0 0 1-.6 7.8"/><path class="cloud-slash" d="M4 4l16 16"/></svg>
+            <span>没有数据上过云</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 收尾 ========== -->
+  <section class="section cta" id="start">
+    <div class="wrap cta-inner">
+      <p class="cta-kicker">先做今天最小的一件</p>
+      <h2 class="cta-title">今天做一点，接上。</h2>
+      <p class="cta-sub">不用再找一个新的待办工具。双击 index.html 就能用；数据只在这台设备的浏览器里，换设备不会自动同步。</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary btn-lg" href="demo/index.html" target="_blank" rel="noopener">打开应用</a>
+        <a class="btn btn-ghost btn-lg" href="#turn">再看看它怎么陪你</a>
+      </div>
+      <p class="cta-note">不用注册，不用联网。数据只存在你自己的浏览器里。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">✓</span>
+        <b>陪伴<em>·</em>计划</b>
+        <span class="footer-ver">v5</span>
+      </div>
+      <p class="footer-desc">原生 HTML / CSS / JavaScript，无框架、零依赖。一个围绕「拐点」做的小项目。</p>
+      <div class="footer-links">
+        <a href="demo/index.html" target="_blank" rel="noopener">打开应用</a>
+        <a href="#top">回到顶部</a>
+      </div>
+    </div>
+    <p class="footer-note">页面里的应用截图由 headless Chrome 真实渲染生成，不是设计稿。这个介绍页本身也不加载任何外部资源，断网也能看。右上角可以在「夜读灯」和「纸感」之间切换，选择会记在这台设备上。</p>
+  </div>
+</footer>
+
+<noscript>
+  <style>
+    .panel[hidden]{display:block!important}
+    .theme-btn{display:none}
+  </style>
+</noscript>
+
+<script src="script.js"></script>
+</body>
+</html>
